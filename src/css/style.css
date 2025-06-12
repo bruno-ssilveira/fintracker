@@ -4,43 +4,41 @@
     box-sizing: border-box;
 }
 
+body {
+    background: #161616;
+}
+
 .navBar {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: rgb(42, 0, 139);
+    gap: 2em;
+    background: rgb(7, 0, 106);
     height: 100vh;
-    width: 3em;
+    width: 4em;
     border-radius: 0 1em 0 0;
-    position: absolute;
 }
 
-.navBar:hover {
-    width: 10em;
-    .navArrowLeft {
-        left: 5.3em;
-        display: block;
-    }
-    .navArrowRight {
-        display: none;
-    }
+.navArrowRight:active {
+    background: #F5F5F5;
+    color: #000;
 }
 
 .navArrowRight {
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: .3em .6em;
-    background: rgb(42, 0, 139);
+    font-size: 1.5em;
+    font-weight: bolder;
+    padding: .4em .6em;
+    background: rgb(7, 0, 106);
     color: #fff;
-    border: 4px solid #fff;
     border-radius: 100%;
-    width: fit-content;
     user-select: none;
     position: absolute;
-    top: 1em;
-    left: .5em;
+    top: 1.3em;
+    left: 1em;
+    border: 4px solid #161616;
 }
+
 .navArrowLeft {
     display: none;
     font-size: 1.5rem;
@@ -55,4 +53,12 @@
     position: absolute;
     top: 1em;
     left: .5em;
+}
+
+.add {
+    display: none;
+}
+
+.controlDash {
+    display: none;
 }
