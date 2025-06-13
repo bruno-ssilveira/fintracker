@@ -1,3 +1,12 @@
+:root {
+    --strong-blue: rgb(6,0,83);
+    --almost-white: #F5F5F5;
+    --almost-black: #161616;
+    --selected-icon: rgba(255, 255, 255, 0.15);
+    --black: #000;
+    --white: #FFF;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,45 +23,51 @@ body {
     align-items: center;
     justify-content: center;
     gap: 2em;
-    background: rgb(7, 0, 106);
+    background: var(--strong-blue);
     height: 100vh;
     width: 4em;
     border-radius: 0 1em 0 0;
 }
 
 .navArrowRight:active {
-    background: #F5F5F5;
-    color: #000;
+    background: var(--almost-white);
+    color: var(--black);
+    transition: .2s;
+}
+
+.navArrowLeft:active {
+    background: var(--almost-white);
+    color: var(--black);
+    transition: .2s;
 }
 
 .navArrowRight {
     font-size: 1.5em;
     font-weight: bolder;
     padding: .4em .6em;
-    background: rgb(7, 0, 106);
-    color: #fff;
+    background: #282828;
+    color: var(--almost-white);
     border-radius: 100%;
     user-select: none;
     position: absolute;
     top: 1.3em;
     left: 1em;
-    border: 4px solid #161616;
+    border: 4px solid var(--almost-black);
 }
 
 .navArrowLeft {
     display: none;
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: .3em .6em;
-    background: rgb(42, 0, 139);
-    color: #fff;
-    border: 4px solid #fff;
+    font-size: 1.5em;
+    font-weight: bolder;
+    padding: .4em .6em;
+    background: #282828;
+    color: var(--almost-white);
     border-radius: 100%;
-    width: fit-content;
     user-select: none;
     position: absolute;
-    top: 1em;
-    left: .5em;
+    top: 1.3em;
+    left: 7em;
+    border: 4px solid var(--almost-black);
 }
 
 .add {
@@ -61,4 +76,27 @@ body {
 
 .controlDash {
     display: none;
+}
+
+.dashboard {
+    padding: 10px;
+    border-radius: 10px;
+    background: var(--selected-icon);
+}
+
+.icon {
+    user-select: none;
+    padding: 10px;
+}
+
+.icon:hover {
+    background: var(--selected-icon);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.iconText {
+    display: none;
+    flex-direction: column;
+    gap: 3em;
 }
