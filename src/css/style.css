@@ -1,8 +1,9 @@
 :root {
-    --strong-blue: rgb(6,0,83);
-    --almost-white: #F5F5F5;
-    --almost-black: #161616;
-    --selected-icon: rgba(255, 255, 255, 0.15);
+    --almostblack: #272727;
+    --almostwhite: #F5F5F5;
+    --blackground: #191919;
+    --details: #4DAFFF;
+    --selected-icon: #28445a;
     --black: #000;
     --white: #FFF;
 }
@@ -11,82 +12,94 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Be Vietnam Pro';
 }
 
 body {
-    background: #161616;
+    background: var(--blackground);
 }
 
+#app {
+    color: var(--almostwhite);
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* NAVBAR */
 .navBar {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2em;
-    background: var(--strong-blue);
+    background: var(--almostblack);
     height: 100vh;
     width: 4em;
     border-radius: 0 1em 0 0;
+    border: 2px solid var(--black);
+    position: absolute;
 }
 
-.navArrowRight:active {
-    background: var(--almost-white);
-    color: var(--black);
-    transition: .2s;
+.title {
+    display: none;
+    position: absolute;
+    top: 10%;
+    left: 7%;
+    color: var(--details);
+    font-size: 32px;
 }
 
-.navArrowLeft:active {
-    background: var(--almost-white);
-    color: var(--black);
-    transition: .2s;
+.navArrowLeft:hover {
+    background: var(--selected-icon);
+    transition: 1s;
+}
+
+.navArrowRight:hover {
+    background: var(--selected-icon);
+    transition: 1s;
 }
 
 .navArrowRight {
-    font-size: 1.5em;
-    font-weight: bolder;
-    padding: .4em .6em;
     background: #282828;
-    color: var(--almost-white);
-    border-radius: 100%;
+    padding: .8em 1em;
+    color: var(--almostwhite);
+    border-radius: 50%;
     user-select: none;
     position: absolute;
     top: 1.3em;
-    left: 1em;
-    border: 4px solid var(--almost-black);
+    left: 1.5em;
+    border: 4px solid var(--blackground);
+    cursor: pointer;
+}
+
+.navArrowRight img {
+    margin-left: .1em;
 }
 
 .navArrowLeft {
     display: none;
-    font-size: 1.5em;
-    font-weight: bolder;
-    padding: .4em .6em;
     background: #282828;
-    color: var(--almost-white);
-    border-radius: 100%;
+    padding: .8em 1em;
+    color: var(--almostwhite);
+    border-radius: 50%;
     user-select: none;
     position: absolute;
     top: 1.3em;
-    left: 7em;
-    border: 4px solid var(--almost-black);
+    left: 10.4em;
+    border: 4px solid var(--blackground);
+    cursor: pointer;
 }
 
-.add {
-    display: none;
-}
-
-.controlDash {
-    display: none;
-}
-
-.dashboard {
-    padding: 10px;
-    border-radius: 10px;
-    background: var(--selected-icon);
+.navArrowLeft img {
+    margin-right: .1em;
 }
 
 .icon {
     user-select: none;
     padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 .icon:hover {
@@ -98,5 +111,49 @@ body {
 .iconText {
     display: none;
     flex-direction: column;
-    gap: 3em;
+    justify-content: center;
+    gap: 1em;
+    width: 100%;
+    padding: 10%;
+    cursor: pointer;
+}
+
+.icon2 {
+    display: flex;
+    align-items: center;
+    gap: .7em;
+    font-size: 16px;
+    font-weight: 200;
+    color: var(--almostwhite);
+    user-select: none;
+    padding: 16px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.icon2:hover {
+    background: var(--selected-icon);
+}
+
+.selected {
+    background: var(--selected-icon);
+}
+
+.selected2 {
+    background: var(--selected-icon);
+    text-decoration-line: underline;
+    text-decoration-color: var(--details);
+    text-decoration-thickness: .1em;
+    text-underline-offset: .3em;
+    font-weight: 400;
+}
+
+/* DASHBOARD */
+.dashboard {
+    display: flex;
+    margin: 1em 0 1em 7.7em;
+    width: 90%;
+    background: var(--almostblack);
+    border: 2px solid var(--black);
+    border-radius: 8px;
 }
