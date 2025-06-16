@@ -1,5 +1,5 @@
 export default function invest() {
     return `
-        <div class="dashboard">INVESTMENTS</div>
+        <div class="container">INVESTMENTS</div>
     `
 }

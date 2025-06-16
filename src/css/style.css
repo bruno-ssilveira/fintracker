@@ -149,10 +149,11 @@ body {
 }
 
 /* DASHBOARD */
-.dashboard {
+.container {
     display: flex;
-    margin: 1em 0 1em 7.7em;
-    width: 90%;
+    margin: 1em 0 0 7.7em; 
+    width: 91vw;
+    height: 97vh;
     background: var(--almostblack);
     border: 2px solid var(--black);
     border-radius: 8px;

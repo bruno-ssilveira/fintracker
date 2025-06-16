@@ -3,7 +3,6 @@ import dashboard from '../pages/dashboard.js';
 import invest from '../pages/invest.js';
 import navbarEvents from './events.js';
 
-const app = document.getElementById('app');
 const navigation = document.getElementById('navigation');
 const pageContent = document.getElementById('pageContent');
 
