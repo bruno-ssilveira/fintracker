@@ -2,6 +2,7 @@ import navBar from '../components/navbar.js';
 import dashboard from '../pages/dashboard.js';
 import invest from '../pages/invest.js';
 import navbarEvents from './events.js';
+import amcharts from './amcharts.js';
 
 const navigation = document.getElementById('navigation');
 const pageContent = document.getElementById('pageContent');
@@ -42,9 +43,9 @@ function render() {
                 iconInvestments.classList.add('selected');
                 iconInvestments2.classList.add('selected2');
             };
-
-            navbarEvents();
         }
+
+        amcharts();
     })
     
     navbarEvents();
