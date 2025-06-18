@@ -48,6 +48,7 @@ function render() {
         amcharts();
     })
     
+    amcharts();
     navbarEvents();
 }
 
